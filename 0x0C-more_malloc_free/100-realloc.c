@@ -1,44 +1,37 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * _realloc -  function that reallocates a memory block
- * using malloc and free
- * @old_size: number min
- * @new_size: number max
+ * _realloc - function that reallocates a memory block using malloc and free
  * @ptr: pointer
- * Return: Always 0.
+ * @old_size: old size
+ * @new_size: new size
+ * Return: pointer
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *str;
-	char *ptr;
+	char *clone, *relloc;
 	unsigned int i;
 
+	if (ptr != NULL)
+	clone = ptr;
+	else
+	{
+		return (malloc(new_size));
+	}
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
-		return (NULL);
+		return (0);
 	}
-	if (new_size == old_size)
+	relloc = malloc(new_size);
+	if (relloc == NULL)
 	{
-		return (ptr);
+		return (0);
 	}
-	if (ptr == NULL)
+	for (i = 0; i < (old_size || i < new_size); i++)
 	{
-		str = malloc(new_size);
-		return (str);
-	}
-	str = malloc(new_size);
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	for (i = 0; i < old_size; i++)
-	{
-		*(str + i) = *(ptr + i);
+		*(relloc + i) = clone[i];
 	}
 	free(ptr);
-	return (str);
+	return (relloc);
 }
