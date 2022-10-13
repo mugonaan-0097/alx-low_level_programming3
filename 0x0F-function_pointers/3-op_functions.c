@@ -8,7 +8,7 @@
  * @b: second number
  * Return: 0 if false, something else otherwise.
  */
-int op_add(int a, int b);
+int op_add(int a, int b)
 {
 	return (a + b);
 }
@@ -18,7 +18,7 @@ int op_add(int a, int b);
  * @b: second number
  * Return: 0 if false, something else otherwise.
  */
-int op_sub(int a, int b);
+int op_sub(int a, int b)
 {
 	return (a - b);
 }
@@ -28,7 +28,7 @@ int op_sub(int a, int b);
  * @b: second number
  * Return: 0 if false, something else otherwise.
  */
-int op_mul(int a, int b);
+int op_mul(int a, int b)
 {
 	return (a * b);
 }
@@ -52,7 +52,7 @@ int op_div(int a, int b)
  * @b: second number
  * Return: the value of the remainder
  */
-int op_mod(int a, b);
+int op_mod(int a, b)
 {
 	if (b == 0)
 	{
