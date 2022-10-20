@@ -30,7 +30,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *add;
 	list_t *pointer;
 
-	add = malloc(sizeof(list_list));
+	add = malloc(sizeof(list_t));
 	if (add == NULL)
 		return (NULL);
 
