@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * error_file - checks if files can be opened
@@ -40,8 +39,9 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "%s\n", "usage: cp file_from file_to");
 		exit(97);
 	}
+
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_CREAT || O_WRONLY || O_TRUNC | O_APPEND, 0664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	error_file(file_from, file_to, argv);
 
 	nchars = 1024;
