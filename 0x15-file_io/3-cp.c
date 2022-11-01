@@ -57,6 +57,7 @@ int main(int argc, char *argv[])
 		if (nwr == -1)
 			error_file(0, -1, argv);
 	}
+
 	err_close = close(file_from);
 	if (err_close == -1)
 	{
@@ -64,6 +65,7 @@ int main(int argc, char *argv[])
 			"Error: can't close fd %d\n", file_from);
 		exit(100);
 	}
+
 	err_close = close(file_to);
 	if (err_close == -1)
 	{
