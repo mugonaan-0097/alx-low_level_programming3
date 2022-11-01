@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 	if (err_close == -1)
 	{
 		dprintf(STDERR_FILENO,
-			"Error: can't close fd %d\n", file_from);
+			"Error: can't close fd %d\n", file_to);
 		exit(100);
 	}
 	return (0);
